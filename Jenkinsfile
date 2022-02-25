@@ -33,6 +33,8 @@ pipeline {
             set -xe
            
             docker push 406971847152.dkr.ecr.us-east-1.amazonaws.com/sample-microservice:${BUILD_NUMBER}
+            docker tag 406971847152.dkr.ecr.us-east-1.amazonaws.com/sample-microservice:${BUILD_NUMBER} 406971847152.dkr.ecr.us-east-1.amazonaws.com/sample-microservice:latest
+            docker push 406971847152.dkr.ecr.us-east-1.amazonaws.com/sample-microservice:latest
          '''.stripIndent())
             }
         }
