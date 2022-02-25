@@ -38,7 +38,7 @@ pipeline {
         }
         stage('Remove Unused docker image') {
           steps{
-            sh "docker rmi $registry:$BUILD_NUMBER"
+            sh "docker rmi 406971847152.dkr.ecr.us-east-1.amazonaws.com/sample-microservice:$BUILD_NUMBER"
           }
         }
     }
